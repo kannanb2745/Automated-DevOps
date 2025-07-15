@@ -1,33 +1,39 @@
-# Use a minimal Python image (based on Debian)
+# Use a minimal Python image
 FROM python:3.10-slim
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
-# Install basic system tools
+# Install dependencies
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     build-essential \
     curl \
     nano \
-    iputils-ping \
-    net-tools \
     git \
     && rm -rf /var/lib/apt/lists/*
 
 # Set working directory
 WORKDIR /app
 
-# Copy the entire project into the container
+# Copy everything into container
 COPY . .
 
-# Install Python dependencies
+# Install Python packages
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose the port Flask runs on
+# Set environment for Flask
+ENV FLASK_APP=app/main.py
+ENV FLASK_RUN_HOST=0.0.0.0
+ENV FLASK_ENV=development
+
+# Copy .env manually (optional if using docker-compose)
+# COPY .env .env
+
+# Expose Flask port
 EXPOSE 5000
 
-# Start the app
-CMD ["python", "app/main.py"]
+# Run the app
+CMD ["flask", "run"]

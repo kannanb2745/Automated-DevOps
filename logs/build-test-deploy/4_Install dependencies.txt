@@ -1,58 +1,39 @@
-﻿2025-07-15T15:56:42.3210149Z ##[group]Run python -m pip install --upgrade pip
-2025-07-15T15:56:42.3210581Z [36;1mpython -m pip install --upgrade pip[0m
-2025-07-15T15:56:42.3210876Z [36;1mpip install -r requirements.txt[0m
-2025-07-15T15:56:42.3433045Z shell: /usr/bin/bash -e {0}
-2025-07-15T15:56:42.3433391Z env:
-2025-07-15T15:56:42.3433697Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T15:56:42.3434193Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
-2025-07-15T15:56:42.3434661Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T15:56:42.3435068Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T15:56:42.3435481Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T15:56:42.3435919Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
-2025-07-15T15:56:42.3436264Z ##[endgroup]
-2025-07-15T15:56:48.9620593Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages (25.1.1)
-2025-07-15T15:56:49.6403910Z Collecting flask==3.0.2 (from -r requirements.txt (line 1))
-2025-07-15T15:56:49.6736989Z   Downloading flask-3.0.2-py3-none-any.whl.metadata (3.6 kB)
-2025-07-15T15:56:49.7286087Z Collecting pytest==8.2.1 (from -r requirements.txt (line 2))
-2025-07-15T15:56:49.7329233Z   Downloading pytest-8.2.1-py3-none-any.whl.metadata (7.6 kB)
-2025-07-15T15:56:49.7597798Z Collecting Werkzeug>=3.0.0 (from flask==3.0.2->-r requirements.txt (line 1))
-2025-07-15T15:56:49.7639456Z   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
-2025-07-15T15:56:49.7808861Z Collecting Jinja2>=3.1.2 (from flask==3.0.2->-r requirements.txt (line 1))
-2025-07-15T15:56:49.7845651Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
-2025-07-15T15:56:49.7970976Z Collecting itsdangerous>=2.1.2 (from flask==3.0.2->-r requirements.txt (line 1))
-2025-07-15T15:56:49.8015362Z   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
-2025-07-15T15:56:49.8215169Z Collecting click>=8.1.3 (from flask==3.0.2->-r requirements.txt (line 1))
-2025-07-15T15:56:49.8251447Z   Downloading click-8.2.1-py3-none-any.whl.metadata (2.5 kB)
-2025-07-15T15:56:49.8384004Z Collecting blinker>=1.6.2 (from flask==3.0.2->-r requirements.txt (line 1))
-2025-07-15T15:56:49.8418660Z   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
-2025-07-15T15:56:49.8528790Z Collecting iniconfig (from pytest==8.2.1->-r requirements.txt (line 2))
-2025-07-15T15:56:49.8560856Z   Downloading iniconfig-2.1.0-py3-none-any.whl.metadata (2.7 kB)
-2025-07-15T15:56:49.8750140Z Collecting packaging (from pytest==8.2.1->-r requirements.txt (line 2))
-2025-07-15T15:56:49.8783912Z   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
-2025-07-15T15:56:49.8918020Z Collecting pluggy<2.0,>=1.5 (from pytest==8.2.1->-r requirements.txt (line 2))
-2025-07-15T15:56:49.8950102Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
-2025-07-15T15:56:49.9102240Z Collecting exceptiongroup>=1.0.0rc8 (from pytest==8.2.1->-r requirements.txt (line 2))
-2025-07-15T15:56:49.9135213Z   Downloading exceptiongroup-1.3.0-py3-none-any.whl.metadata (6.7 kB)
-2025-07-15T15:56:49.9323401Z Collecting tomli>=1 (from pytest==8.2.1->-r requirements.txt (line 2))
-2025-07-15T15:56:49.9355199Z   Downloading tomli-2.2.1-py3-none-any.whl.metadata (10 kB)
-2025-07-15T15:56:49.9578248Z Collecting typing-extensions>=4.6.0 (from exceptiongroup>=1.0.0rc8->pytest==8.2.1->-r requirements.txt (line 2))
-2025-07-15T15:56:49.9611543Z   Downloading typing_extensions-4.14.1-py3-none-any.whl.metadata (3.0 kB)
-2025-07-15T15:56:50.0222537Z Collecting MarkupSafe>=2.0 (from Jinja2>=3.1.2->flask==3.0.2->-r requirements.txt (line 1))
-2025-07-15T15:56:50.0266590Z   Downloading MarkupSafe-3.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
-2025-07-15T15:56:50.0405546Z Downloading flask-3.0.2-py3-none-any.whl (101 kB)
-2025-07-15T15:56:50.0490906Z Downloading pytest-8.2.1-py3-none-any.whl (339 kB)
-2025-07-15T15:56:50.0570910Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
-2025-07-15T15:56:50.0625307Z Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
-2025-07-15T15:56:50.0680069Z Downloading click-8.2.1-py3-none-any.whl (102 kB)
-2025-07-15T15:56:50.0735361Z Downloading exceptiongroup-1.3.0-py3-none-any.whl (16 kB)
-2025-07-15T15:56:50.0788427Z Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
-2025-07-15T15:56:50.0841252Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
-2025-07-15T15:56:50.0905129Z Downloading MarkupSafe-3.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (20 kB)
-2025-07-15T15:56:50.0956470Z Downloading tomli-2.2.1-py3-none-any.whl (14 kB)
-2025-07-15T15:56:50.1011545Z Downloading typing_extensions-4.14.1-py3-none-any.whl (43 kB)
-2025-07-15T15:56:50.1066023Z Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
-2025-07-15T15:56:50.1126457Z Downloading iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
-2025-07-15T15:56:50.1182770Z Downloading packaging-25.0-py3-none-any.whl (66 kB)
-2025-07-15T15:56:50.1728811Z Installing collected packages: typing-extensions, tomli, pluggy, packaging, MarkupSafe, itsdangerous, iniconfig, click, blinker, Werkzeug, Jinja2, exceptiongroup, pytest, flask
-2025-07-15T15:56:50.7985493Z 
-2025-07-15T15:56:50.8018175Z Successfully installed Jinja2-3.1.6 MarkupSafe-3.0.2 Werkzeug-3.1.3 blinker-1.9.0 click-8.2.1 exceptiongroup-1.3.0 flask-3.0.2 iniconfig-2.1.0 itsdangerous-2.2.0 packaging-25.0 pluggy-1.6.0 pytest-8.2.1 tomli-2.2.1 typing-extensions-4.14.1
+﻿2025-07-15T17:14:34.3022997Z ##[group]Run python -m pip install --upgrade pip
+2025-07-15T17:14:34.3023420Z [36;1mpython -m pip install --upgrade pip[0m
+2025-07-15T17:14:34.3023731Z [36;1mpip install -r requirements.txt[0m
+2025-07-15T17:14:34.3070408Z shell: /usr/bin/bash -e {0}
+2025-07-15T17:14:34.3070669Z env:
+2025-07-15T17:14:34.3070922Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T17:14:34.3071341Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
+2025-07-15T17:14:34.3071738Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T17:14:34.3072092Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T17:14:34.3072456Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T17:14:34.3072797Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
+2025-07-15T17:14:34.3073087Z ##[endgroup]
+2025-07-15T17:14:34.9450597Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages (25.1.1)
+2025-07-15T17:14:35.6987346Z Collecting flask==3.0.2 (from -r requirements.txt (line 1))
+2025-07-15T17:14:35.7694491Z   Downloading flask-3.0.2-py3-none-any.whl.metadata (3.6 kB)
+2025-07-15T17:14:35.8472804Z Collecting pytest==8.2.1 (from -r requirements.txt (line 2))
+2025-07-15T17:14:35.8638620Z   Downloading pytest-8.2.1-py3-none-any.whl.metadata (7.6 kB)
+2025-07-15T17:14:35.8911873Z Collecting blinker==1.9.0 (from -r requirements.txt (line 3))
+2025-07-15T17:14:35.9073981Z   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+2025-07-15T17:14:35.9409086Z Collecting certifi==2025.1.31 (from -r requirements.txt (line 4))
+2025-07-15T17:14:35.9567619Z   Downloading certifi-2025.1.31-py3-none-any.whl.metadata (2.5 kB)
+2025-07-15T17:14:36.0701104Z Collecting charset-normalizer==3.4.1 (from -r requirements.txt (line 5))
+2025-07-15T17:14:36.0863891Z   Downloading charset_normalizer-3.4.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (35 kB)
+2025-07-15T17:14:36.1272401Z Collecting click==8.1.8 (from -r requirements.txt (line 6))
+2025-07-15T17:14:36.1443508Z   Downloading click-8.1.8-py3-none-any.whl.metadata (2.3 kB)
+2025-07-15T17:14:36.1708910Z Collecting dnspython==2.7.0 (from -r requirements.txt (line 7))
+2025-07-15T17:14:36.1865425Z   Downloading dnspython-2.7.0-py3-none-any.whl.metadata (5.8 kB)
+2025-07-15T17:14:36.1975029Z ERROR: Cannot install Flask==3.1.0 and flask==3.0.2 because these package versions have conflicting dependencies.
+2025-07-15T17:14:36.1979418Z 
+2025-07-15T17:14:36.1979608Z The conflict is caused by:
+2025-07-15T17:14:36.1980080Z     The user requested flask==3.0.2
+2025-07-15T17:14:36.1980550Z     The user requested Flask==3.1.0
+2025-07-15T17:14:36.1981288Z 
+2025-07-15T17:14:36.1981468Z To fix this you could try to:
+2025-07-15T17:14:36.1982019Z 1. loosen the range of package versions you've specified
+2025-07-15T17:14:36.1982830Z 2. remove package versions to allow pip to attempt to solve the dependency conflict
+2025-07-15T17:14:36.1983371Z 
+2025-07-15T17:14:36.1989356Z ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
+2025-07-15T17:14:36.2437704Z ##[error]Process completed with exit code 1.
