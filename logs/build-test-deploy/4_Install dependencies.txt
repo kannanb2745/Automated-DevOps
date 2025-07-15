@@ -1,39 +1,39 @@
-﻿2025-07-15T17:14:34.3022997Z ##[group]Run python -m pip install --upgrade pip
-2025-07-15T17:14:34.3023420Z [36;1mpython -m pip install --upgrade pip[0m
-2025-07-15T17:14:34.3023731Z [36;1mpip install -r requirements.txt[0m
-2025-07-15T17:14:34.3070408Z shell: /usr/bin/bash -e {0}
-2025-07-15T17:14:34.3070669Z env:
-2025-07-15T17:14:34.3070922Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T17:14:34.3071341Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
-2025-07-15T17:14:34.3071738Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T17:14:34.3072092Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T17:14:34.3072456Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T17:14:34.3072797Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
-2025-07-15T17:14:34.3073087Z ##[endgroup]
-2025-07-15T17:14:34.9450597Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages (25.1.1)
-2025-07-15T17:14:35.6987346Z Collecting flask==3.0.2 (from -r requirements.txt (line 1))
-2025-07-15T17:14:35.7694491Z   Downloading flask-3.0.2-py3-none-any.whl.metadata (3.6 kB)
-2025-07-15T17:14:35.8472804Z Collecting pytest==8.2.1 (from -r requirements.txt (line 2))
-2025-07-15T17:14:35.8638620Z   Downloading pytest-8.2.1-py3-none-any.whl.metadata (7.6 kB)
-2025-07-15T17:14:35.8911873Z Collecting blinker==1.9.0 (from -r requirements.txt (line 3))
-2025-07-15T17:14:35.9073981Z   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
-2025-07-15T17:14:35.9409086Z Collecting certifi==2025.1.31 (from -r requirements.txt (line 4))
-2025-07-15T17:14:35.9567619Z   Downloading certifi-2025.1.31-py3-none-any.whl.metadata (2.5 kB)
-2025-07-15T17:14:36.0701104Z Collecting charset-normalizer==3.4.1 (from -r requirements.txt (line 5))
-2025-07-15T17:14:36.0863891Z   Downloading charset_normalizer-3.4.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (35 kB)
-2025-07-15T17:14:36.1272401Z Collecting click==8.1.8 (from -r requirements.txt (line 6))
-2025-07-15T17:14:36.1443508Z   Downloading click-8.1.8-py3-none-any.whl.metadata (2.3 kB)
-2025-07-15T17:14:36.1708910Z Collecting dnspython==2.7.0 (from -r requirements.txt (line 7))
-2025-07-15T17:14:36.1865425Z   Downloading dnspython-2.7.0-py3-none-any.whl.metadata (5.8 kB)
-2025-07-15T17:14:36.1975029Z ERROR: Cannot install Flask==3.1.0 and flask==3.0.2 because these package versions have conflicting dependencies.
-2025-07-15T17:14:36.1979418Z 
-2025-07-15T17:14:36.1979608Z The conflict is caused by:
-2025-07-15T17:14:36.1980080Z     The user requested flask==3.0.2
-2025-07-15T17:14:36.1980550Z     The user requested Flask==3.1.0
-2025-07-15T17:14:36.1981288Z 
-2025-07-15T17:14:36.1981468Z To fix this you could try to:
-2025-07-15T17:14:36.1982019Z 1. loosen the range of package versions you've specified
-2025-07-15T17:14:36.1982830Z 2. remove package versions to allow pip to attempt to solve the dependency conflict
-2025-07-15T17:14:36.1983371Z 
-2025-07-15T17:14:36.1989356Z ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
-2025-07-15T17:14:36.2437704Z ##[error]Process completed with exit code 1.
+﻿2025-07-15T17:26:20.7586821Z ##[group]Run python -m pip install --upgrade pip
+2025-07-15T17:26:20.7587248Z [36;1mpython -m pip install --upgrade pip[0m
+2025-07-15T17:26:20.7587561Z [36;1mpip install -r requirements.txt[0m
+2025-07-15T17:26:20.7626606Z shell: /usr/bin/bash -e {0}
+2025-07-15T17:26:20.7626866Z env:
+2025-07-15T17:26:20.7627130Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T17:26:20.7627545Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
+2025-07-15T17:26:20.7627945Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T17:26:20.7628295Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T17:26:20.7628654Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T17:26:20.7628992Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
+2025-07-15T17:26:20.7629278Z ##[endgroup]
+2025-07-15T17:26:21.5846538Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages (25.1.1)
+2025-07-15T17:26:22.3477971Z Collecting flask==3.0.2 (from -r requirements.txt (line 1))
+2025-07-15T17:26:22.4184812Z   Downloading flask-3.0.2-py3-none-any.whl.metadata (3.6 kB)
+2025-07-15T17:26:22.4928330Z Collecting pytest==8.2.1 (from -r requirements.txt (line 2))
+2025-07-15T17:26:22.5110077Z   Downloading pytest-8.2.1-py3-none-any.whl.metadata (7.6 kB)
+2025-07-15T17:26:22.5409255Z Collecting blinker==1.9.0 (from -r requirements.txt (line 3))
+2025-07-15T17:26:22.5567131Z   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+2025-07-15T17:26:22.5929204Z Collecting certifi==2025.1.31 (from -r requirements.txt (line 4))
+2025-07-15T17:26:22.6090229Z   Downloading certifi-2025.1.31-py3-none-any.whl.metadata (2.5 kB)
+2025-07-15T17:26:22.7251722Z Collecting charset-normalizer==3.4.1 (from -r requirements.txt (line 5))
+2025-07-15T17:26:22.7456561Z   Downloading charset_normalizer-3.4.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (35 kB)
+2025-07-15T17:26:22.7886392Z Collecting click==8.1.8 (from -r requirements.txt (line 6))
+2025-07-15T17:26:22.8047337Z   Downloading click-8.1.8-py3-none-any.whl.metadata (2.3 kB)
+2025-07-15T17:26:22.8326736Z Collecting dnspython==2.7.0 (from -r requirements.txt (line 7))
+2025-07-15T17:26:22.8487132Z   Downloading dnspython-2.7.0-py3-none-any.whl.metadata (5.8 kB)
+2025-07-15T17:26:22.8599369Z ERROR: Cannot install Flask==3.1.0 and flask==3.0.2 because these package versions have conflicting dependencies.
+2025-07-15T17:26:22.8604195Z 
+2025-07-15T17:26:22.8604571Z The conflict is caused by:
+2025-07-15T17:26:22.8604896Z     The user requested flask==3.0.2
+2025-07-15T17:26:22.8605157Z     The user requested Flask==3.1.0
+2025-07-15T17:26:22.8605578Z 
+2025-07-15T17:26:22.8605669Z To fix this you could try to:
+2025-07-15T17:26:22.8605963Z 1. loosen the range of package versions you've specified
+2025-07-15T17:26:22.8606407Z 2. remove package versions to allow pip to attempt to solve the dependency conflict
+2025-07-15T17:26:22.8606715Z 
+2025-07-15T17:26:22.8613687Z ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
+2025-07-15T17:26:22.9101161Z ##[error]Process completed with exit code 1.
