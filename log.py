@@ -7,13 +7,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
 # GitHub Repo Info
-OWNER = "kannanb2745"        # e.g. "dineshxyz"
-REPO = "testing-CI-CD"             # e.g. "ci-test"
+OWNER = "kannanb2745"
+REPO = "testing-CI-CD"
 BRANCH = "main"
-WORKFLOW_FILENAME = "main.yml"  # e.g. "build-test-deploy.yml"
-TOKEN = os.getenv('TOKEN')             # Replace with your token
+WORKFLOW_FILENAME = "main.yml"
+TOKEN = os.getenv('TOKEN')
 
 HEADERS = {
     "Authorization": f"Bearer {TOKEN}",
@@ -73,6 +72,77 @@ def print_logs():
             with open(path, "r", encoding="utf-8", errors="ignore") as f:
                 print(f.read())
 
+# 6. Generate Summary
+def summarize_run(run_id):
+    print("\n📋 Generating summary...")
+
+    # Get workflow run info
+    run_url = f"https://api.github.com/repos/{OWNER}/{REPO}/actions/runs/{run_id}"
+    run_info = requests.get(run_url, headers=HEADERS).json()
+
+    commit_sha = run_info["head_sha"]
+    actor = run_info["actor"]["login"]
+    status = run_info["conclusion"]
+    trigger = run_info["event"]
+    branch = run_info["head_branch"]
+    workflow_name = run_info["name"]
+    duration = run_info.get("run_duration_ms", 0) / 1000
+
+    # Get commit info
+    commit_url = f"https://api.github.com/repos/{OWNER}/{REPO}/commits/{commit_sha}"
+    commit_data = requests.get(commit_url, headers=HEADERS).json()
+    message = commit_data["commit"]["message"]
+
+    # Get job step names from downloaded logs
+    steps = []
+    for root, dirs, files in os.walk("logs"):
+        for file in sorted(files):
+            if file.endswith(".txt"):
+                steps.append(file.replace(".txt", ""))
+
+    # Detect actions performed
+    actions = []
+    for step in steps:
+        lower = step.lower()
+        if "pytest" in lower:
+            actions.append("✅ Ran unit tests using Pytest")
+        if "docker" in lower and "login" in lower:
+            actions.append("🔐 Logged in to Docker Hub")
+        if "docker image" in lower or "build docker" in lower:
+            actions.append("📦 Built Docker image")
+        if "push" in lower:
+            actions.append("🚀 Pushed Docker image to Docker Hub")
+
+    # Create summary text
+    summary = f"""✅ CI/CD Pipeline Summary
+----------------------------
+
+📦 Commit Info:
+- Message       : {message}
+- Author        : {actor}
+- Commit SHA    : {commit_sha}
+- Branch        : {branch}
+
+🧪 Workflow Run: {workflow_name}
+- Status        : {'✅ Success' if status == 'success' else '❌ Failed'}
+- Triggered by  : {trigger}
+- Duration      : {duration:.2f} seconds
+
+📋 Job Steps:
+""" + "\n".join([f"{i+1}. {step} ✅" for i, step in enumerate(steps)]) + "\n\n"
+
+    summary += "🛠️ Actions Performed:\n"
+    for action in actions:
+        summary += f"- {action}\n"
+
+    summary += "\n📄 Logs saved in: ./logs/\n📝 Summary saved in: ./ci_summary.txt\n"
+
+    # Save to file
+    with open("ci_summary.txt", "w") as f:
+        f.write(summary)
+
+    print(summary)
+
 # ==== Run it ====
 trigger_workflow()
 time.sleep(10)
@@ -80,3 +150,4 @@ run_id = get_latest_run_id()
 wait_for_run(run_id)
 download_and_extract_logs(run_id)
 print_logs()
+summarize_run(run_id)
