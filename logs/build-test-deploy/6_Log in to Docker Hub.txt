@@ -1,0 +1,16 @@
+﻿2025-07-15T10:46:12.9484040Z ##[group]Run docker/login-action@v3
+2025-07-15T10:46:12.9484331Z with:
+2025-07-15T10:46:12.9484774Z   username: ***
+2025-07-15T10:46:12.9485028Z   password: ***
+2025-07-15T10:46:12.9485221Z   ecr: auto
+2025-07-15T10:46:12.9485393Z   logout: true
+2025-07-15T10:46:12.9485566Z env:
+2025-07-15T10:46:12.9485812Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T10:46:12.9486216Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
+2025-07-15T10:46:12.9486618Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T10:46:12.9486970Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T10:46:12.9487321Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T10:46:12.9487674Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
+2025-07-15T10:46:12.9487967Z ##[endgroup]
+2025-07-15T10:46:13.2523266Z Logging into Docker Hub...
+2025-07-15T10:46:13.5841450Z Login Succeeded!
