@@ -1,0 +1,22 @@
+﻿2025-07-15T17:28:18.6073109Z ##[group]Run export PYTHONPATH=.
+2025-07-15T17:28:18.6073453Z [36;1mexport PYTHONPATH=.[0m
+2025-07-15T17:28:18.6073705Z [36;1mpytest test_app.py -v[0m
+2025-07-15T17:28:18.6102073Z shell: /usr/bin/bash -e {0}
+2025-07-15T17:28:18.6102303Z env:
+2025-07-15T17:28:18.6102544Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T17:28:18.6102963Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
+2025-07-15T17:28:18.6103355Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T17:28:18.6103698Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T17:28:18.6104043Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T17:28:18.6104385Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
+2025-07-15T17:28:18.6104669Z ##[endgroup]
+2025-07-15T17:28:18.9736806Z ============================= test session starts ==============================
+2025-07-15T17:28:18.9737936Z platform linux -- Python 3.10.18, pytest-8.2.1, pluggy-1.6.0 -- /opt/hostedtoolcache/Python/3.10.18/x64/bin/python
+2025-07-15T17:28:18.9738818Z cachedir: .pytest_cache
+2025-07-15T17:28:18.9739260Z rootdir: /home/runner/work/testing-CI-CD/testing-CI-CD
+2025-07-15T17:28:18.9751157Z ERROR: file or directory not found: test_app.py
+2025-07-15T17:28:18.9751513Z 
+2025-07-15T17:28:18.9751669Z collecting ... collected 0 items
+2025-07-15T17:28:18.9751923Z 
+2025-07-15T17:28:18.9752123Z ============================ no tests ran in 0.00s =============================
+2025-07-15T17:28:18.9984946Z ##[error]Process completed with exit code 4.
