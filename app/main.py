@@ -5,7 +5,7 @@ def create_app():
 
     @app.route('/')
     def home():
-        return jsonify({'message': 'Hello, CI/CD World Testing!'})
+        return jsonify({'message': 'Hello, CI/CD World Testing Hack Finity!'})
 
     return app
 
