@@ -1,89 +1,63 @@
-﻿2025-07-15T17:30:05.4584725Z ##[group]Run python -m pip install --upgrade pip
-2025-07-15T17:30:05.4585134Z [36;1mpython -m pip install --upgrade pip[0m
-2025-07-15T17:30:05.4585441Z [36;1mpip install -r requirements.txt[0m
-2025-07-15T17:30:05.4627147Z shell: /usr/bin/bash -e {0}
-2025-07-15T17:30:05.4627420Z env:
-2025-07-15T17:30:05.4627830Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T17:30:05.4628268Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
-2025-07-15T17:30:05.4628679Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T17:30:05.4629031Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T17:30:05.4629408Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T17:30:05.4629757Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
-2025-07-15T17:30:05.4630050Z ##[endgroup]
-2025-07-15T17:30:06.5713476Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages (25.1.1)
-2025-07-15T17:30:07.2662714Z Collecting Flask==3.1.0 (from -r requirements.txt (line 1))
-2025-07-15T17:30:07.3038564Z   Downloading flask-3.1.0-py3-none-any.whl.metadata (2.7 kB)
-2025-07-15T17:30:07.3205052Z Collecting Flask-PyMongo==3.0.1 (from -r requirements.txt (line 2))
-2025-07-15T17:30:07.3261948Z   Downloading flask_pymongo-3.0.1-py3-none-any.whl.metadata (3.5 kB)
-2025-07-15T17:30:07.3782016Z Collecting pytest==8.2.1 (from -r requirements.txt (line 3))
-2025-07-15T17:30:07.3882706Z   Downloading pytest-8.2.1-py3-none-any.whl.metadata (7.6 kB)
-2025-07-15T17:30:07.4043516Z Collecting blinker==1.9.0 (from -r requirements.txt (line 4))
-2025-07-15T17:30:07.4082877Z   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
-2025-07-15T17:30:07.4279516Z Collecting certifi==2025.1.31 (from -r requirements.txt (line 5))
-2025-07-15T17:30:07.4363684Z   Downloading certifi-2025.1.31-py3-none-any.whl.metadata (2.5 kB)
-2025-07-15T17:30:07.5311149Z Collecting charset-normalizer==3.4.1 (from -r requirements.txt (line 6))
-2025-07-15T17:30:07.5371870Z   Downloading charset_normalizer-3.4.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (35 kB)
-2025-07-15T17:30:07.5601713Z Collecting click==8.1.8 (from -r requirements.txt (line 7))
-2025-07-15T17:30:07.5644325Z   Downloading click-8.1.8-py3-none-any.whl.metadata (2.3 kB)
-2025-07-15T17:30:07.5793541Z Collecting dnspython==2.7.0 (from -r requirements.txt (line 8))
-2025-07-15T17:30:07.5841255Z   Downloading dnspython-2.7.0-py3-none-any.whl.metadata (5.8 kB)
-2025-07-15T17:30:07.6072738Z Collecting idna==3.10 (from -r requirements.txt (line 9))
-2025-07-15T17:30:07.6112634Z   Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
-2025-07-15T17:30:07.6273984Z Collecting itsdangerous==2.2.0 (from -r requirements.txt (line 10))
-2025-07-15T17:30:07.6314074Z   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
-2025-07-15T17:30:07.6487367Z Collecting Jinja2==3.1.6 (from -r requirements.txt (line 11))
-2025-07-15T17:30:07.6541586Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
-2025-07-15T17:30:07.7164097Z Collecting MarkupSafe==3.0.2 (from -r requirements.txt (line 12))
-2025-07-15T17:30:07.7208335Z   Downloading MarkupSafe-3.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
-2025-07-15T17:30:07.7375603Z Collecting paho-mqtt==2.1.0 (from -r requirements.txt (line 13))
-2025-07-15T17:30:07.7436172Z   Downloading paho_mqtt-2.1.0-py3-none-any.whl.metadata (23 kB)
-2025-07-15T17:30:08.1093173Z Collecting pymongo==4.11.2 (from -r requirements.txt (line 14))
-2025-07-15T17:30:08.1157018Z   Downloading pymongo-4.11.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (22 kB)
-2025-07-15T17:30:08.1411397Z Collecting python-dotenv==1.0.1 (from -r requirements.txt (line 15))
-2025-07-15T17:30:08.1462089Z   Downloading python_dotenv-1.0.1-py3-none-any.whl.metadata (23 kB)
-2025-07-15T17:30:08.1778451Z Collecting requests==2.32.3 (from -r requirements.txt (line 16))
-2025-07-15T17:30:08.1828304Z   Downloading requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
-2025-07-15T17:30:08.2136578Z Collecting urllib3==2.3.0 (from -r requirements.txt (line 17))
-2025-07-15T17:30:08.2183736Z   Downloading urllib3-2.3.0-py3-none-any.whl.metadata (6.5 kB)
-2025-07-15T17:30:08.2448628Z Collecting Werkzeug==3.1.3 (from -r requirements.txt (line 18))
-2025-07-15T17:30:08.2493371Z   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
-2025-07-15T17:30:08.2886012Z Collecting iniconfig (from pytest==8.2.1->-r requirements.txt (line 3))
-2025-07-15T17:30:08.2931430Z   Downloading iniconfig-2.1.0-py3-none-any.whl.metadata (2.7 kB)
-2025-07-15T17:30:08.3148312Z Collecting packaging (from pytest==8.2.1->-r requirements.txt (line 3))
-2025-07-15T17:30:08.3202289Z   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
-2025-07-15T17:30:08.3377127Z Collecting pluggy<2.0,>=1.5 (from pytest==8.2.1->-r requirements.txt (line 3))
-2025-07-15T17:30:08.3424642Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
-2025-07-15T17:30:08.3600578Z Collecting exceptiongroup>=1.0.0rc8 (from pytest==8.2.1->-r requirements.txt (line 3))
-2025-07-15T17:30:08.3645009Z   Downloading exceptiongroup-1.3.0-py3-none-any.whl.metadata (6.7 kB)
-2025-07-15T17:30:08.3841570Z Collecting tomli>=1 (from pytest==8.2.1->-r requirements.txt (line 3))
-2025-07-15T17:30:08.3888370Z   Downloading tomli-2.2.1-py3-none-any.whl.metadata (10 kB)
-2025-07-15T17:30:08.4628626Z Collecting typing-extensions>=4.6.0 (from exceptiongroup>=1.0.0rc8->pytest==8.2.1->-r requirements.txt (line 3))
-2025-07-15T17:30:08.4671101Z   Downloading typing_extensions-4.14.1-py3-none-any.whl.metadata (3.0 kB)
-2025-07-15T17:30:08.4788273Z Downloading flask-3.1.0-py3-none-any.whl (102 kB)
-2025-07-15T17:30:08.4888824Z Downloading flask_pymongo-3.0.1-py3-none-any.whl (11 kB)
-2025-07-15T17:30:08.4945520Z Downloading pytest-8.2.1-py3-none-any.whl (339 kB)
-2025-07-15T17:30:08.5039213Z Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
-2025-07-15T17:30:08.5097902Z Downloading certifi-2025.1.31-py3-none-any.whl (166 kB)
-2025-07-15T17:30:08.5165865Z Downloading charset_normalizer-3.4.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (146 kB)
-2025-07-15T17:30:08.5242413Z Downloading click-8.1.8-py3-none-any.whl (98 kB)
-2025-07-15T17:30:08.5306548Z Downloading dnspython-2.7.0-py3-none-any.whl (313 kB)
-2025-07-15T17:30:08.5379906Z Downloading idna-3.10-py3-none-any.whl (70 kB)
-2025-07-15T17:30:08.5439534Z Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
-2025-07-15T17:30:08.5531857Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
-2025-07-15T17:30:08.5610760Z Downloading MarkupSafe-3.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (20 kB)
-2025-07-15T17:30:08.5690479Z Downloading paho_mqtt-2.1.0-py3-none-any.whl (67 kB)
-2025-07-15T17:30:08.5780228Z Downloading pymongo-4.11.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.2 MB)
-2025-07-15T17:30:08.5883869Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 126.2 MB/s eta 0:00:00
-2025-07-15T17:30:08.5929743Z Downloading python_dotenv-1.0.1-py3-none-any.whl (19 kB)
-2025-07-15T17:30:08.5994701Z Downloading requests-2.32.3-py3-none-any.whl (64 kB)
-2025-07-15T17:30:08.6060389Z Downloading urllib3-2.3.0-py3-none-any.whl (128 kB)
-2025-07-15T17:30:08.6143579Z Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
-2025-07-15T17:30:08.6220656Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
-2025-07-15T17:30:08.6301817Z Downloading exceptiongroup-1.3.0-py3-none-any.whl (16 kB)
-2025-07-15T17:30:08.6361062Z Downloading tomli-2.2.1-py3-none-any.whl (14 kB)
-2025-07-15T17:30:08.6419662Z Downloading typing_extensions-4.14.1-py3-none-any.whl (43 kB)
-2025-07-15T17:30:08.6481907Z Downloading iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
-2025-07-15T17:30:08.6542705Z Downloading packaging-25.0-py3-none-any.whl (66 kB)
-2025-07-15T17:30:08.7299418Z Installing collected packages: urllib3, typing-extensions, tomli, python-dotenv, pluggy, paho-mqtt, packaging, MarkupSafe, itsdangerous, iniconfig, idna, dnspython, click, charset-normalizer, certifi, blinker, Werkzeug, requests, pymongo, Jinja2, exceptiongroup, pytest, Flask, Flask-PyMongo
-2025-07-15T17:30:10.2211546Z 
-2025-07-15T17:30:10.2261390Z Successfully installed Flask-3.1.0 Flask-PyMongo-3.0.1 Jinja2-3.1.6 MarkupSafe-3.0.2 Werkzeug-3.1.3 blinker-1.9.0 certifi-2025.1.31 charset-normalizer-3.4.1 click-8.1.8 dnspython-2.7.0 exceptiongroup-1.3.0 idna-3.10 iniconfig-2.1.0 itsdangerous-2.2.0 packaging-25.0 paho-mqtt-2.1.0 pluggy-1.6.0 pymongo-4.11.2 pytest-8.2.1 python-dotenv-1.0.1 requests-2.32.3 tomli-2.2.1 typing-extensions-4.14.1 urllib3-2.3.0
+﻿2025-07-15T17:31:09.9203401Z ##[group]Run python -m pip install --upgrade pip
+2025-07-15T17:31:09.9204106Z [36;1mpython -m pip install --upgrade pip[0m
+2025-07-15T17:31:09.9204409Z [36;1mpip install -r requirements.txt[0m
+2025-07-15T17:31:09.9315074Z shell: /usr/bin/bash -e {0}
+2025-07-15T17:31:09.9315338Z env:
+2025-07-15T17:31:09.9315582Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T17:31:09.9315995Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
+2025-07-15T17:31:09.9316400Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T17:31:09.9316743Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T17:31:09.9317106Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T17:31:09.9317447Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
+2025-07-15T17:31:09.9317733Z ##[endgroup]
+2025-07-15T17:31:14.1356923Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages (25.1.1)
+2025-07-15T17:31:14.7919360Z Collecting Flask==3.1.0 (from -r requirements.txt (line 1))
+2025-07-15T17:31:14.8234831Z   Downloading flask-3.1.0-py3-none-any.whl.metadata (2.7 kB)
+2025-07-15T17:31:14.8390954Z Collecting Flask-PyMongo==3.0.1 (from -r requirements.txt (line 2))
+2025-07-15T17:31:14.8431137Z   Downloading flask_pymongo-3.0.1-py3-none-any.whl.metadata (3.5 kB)
+2025-07-15T17:31:14.8956252Z Collecting pytest==8.2.1 (from -r requirements.txt (line 3))
+2025-07-15T17:31:14.8994843Z   Downloading pytest-8.2.1-py3-none-any.whl.metadata (7.6 kB)
+2025-07-15T17:31:14.9134321Z Collecting blinker==1.9.0 (from -r requirements.txt (line 4))
+2025-07-15T17:31:14.9162834Z   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+2025-07-15T17:31:14.9356167Z Collecting certifi==2025.1.31 (from -r requirements.txt (line 5))
+2025-07-15T17:31:14.9386911Z   Downloading certifi-2025.1.31-py3-none-any.whl.metadata (2.5 kB)
+2025-07-15T17:31:15.0247288Z Collecting charset-normalizer==3.4.1 (from -r requirements.txt (line 6))
+2025-07-15T17:31:15.0282198Z   Downloading charset_normalizer-3.4.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (35 kB)
+2025-07-15T17:31:15.0493147Z Collecting click==8.1.8 (from -r requirements.txt (line 7))
+2025-07-15T17:31:15.0521339Z   Downloading click-8.1.8-py3-none-any.whl.metadata (2.3 kB)
+2025-07-15T17:31:15.0656291Z Collecting dnspython==2.7.0 (from -r requirements.txt (line 8))
+2025-07-15T17:31:15.0689774Z   Downloading dnspython-2.7.0-py3-none-any.whl.metadata (5.8 kB)
+2025-07-15T17:31:15.0880430Z Collecting idna==3.10 (from -r requirements.txt (line 9))
+2025-07-15T17:31:15.0977239Z   Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+2025-07-15T17:31:15.1110296Z Collecting itsdangerous==2.2.0 (from -r requirements.txt (line 10))
+2025-07-15T17:31:15.1139836Z   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+2025-07-15T17:31:15.1296127Z Collecting Jinja2==3.1.6 (from -r requirements.txt (line 11))
+2025-07-15T17:31:15.1328729Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+2025-07-15T17:31:15.1918634Z Collecting MarkupSafe==3.0.2 (from -r requirements.txt (line 12))
+2025-07-15T17:31:15.1950355Z   Downloading MarkupSafe-3.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
+2025-07-15T17:31:15.2077882Z Collecting paho-mqtt==2.1.0 (from -r requirements.txt (line 13))
+2025-07-15T17:31:15.2109079Z   Downloading paho_mqtt-2.1.0-py3-none-any.whl.metadata (23 kB)
+2025-07-15T17:31:15.5529861Z Collecting pymongo==4.11.2 (from -r requirements.txt (line 14))
+2025-07-15T17:31:15.5581398Z   Downloading pymongo-4.11.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (22 kB)
+2025-07-15T17:31:15.5818747Z Collecting python-dotenv==1.0.1 (from -r requirements.txt (line 15))
+2025-07-15T17:31:15.5849395Z   Downloading python_dotenv-1.0.1-py3-none-any.whl.metadata (23 kB)
+2025-07-15T17:31:15.6141017Z Collecting requests==2.32.3 (from -r requirements.txt (line 16))
+2025-07-15T17:31:15.6172330Z   Downloading requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+2025-07-15T17:31:15.6429968Z Collecting urllib3==2.3.0 (from -r requirements.txt (line 17))
+2025-07-15T17:31:15.6460068Z   Downloading urllib3-2.3.0-py3-none-any.whl.metadata (6.5 kB)
+2025-07-15T17:31:15.6734687Z Collecting Werkzeug==3.1.3 (from -r requirements.txt (line 18))
+2025-07-15T17:31:15.6767354Z   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+2025-07-15T17:31:15.6912687Z Collecting autodevops-cli==0.1.1 (from -r requirements.txt (line 19))
+2025-07-15T17:31:15.7668317Z   Downloading autodevops_cli-0.1.1-py3-none-any.whl.metadata (494 bytes)
+2025-07-15T17:31:15.7741605Z ERROR: Cannot install certifi==2025.1.31 and certifi==2025.7.14 because these package versions have conflicting dependencies.
+2025-07-15T17:31:15.7746030Z 
+2025-07-15T17:31:15.7746199Z The conflict is caused by:
+2025-07-15T17:31:15.7746568Z     The user requested certifi==2025.1.31
+2025-07-15T17:31:15.7746863Z     The user requested certifi==2025.7.14
+2025-07-15T17:31:15.7747066Z 
+2025-07-15T17:31:15.7747168Z To fix this you could try to:
+2025-07-15T17:31:15.7747470Z 1. loosen the range of package versions you've specified
+2025-07-15T17:31:15.7747945Z 2. remove package versions to allow pip to attempt to solve the dependency conflict
+2025-07-15T17:31:15.7748286Z 
+2025-07-15T17:31:15.7755982Z ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
+2025-07-15T17:31:15.8463931Z ##[error]Process completed with exit code 1.
