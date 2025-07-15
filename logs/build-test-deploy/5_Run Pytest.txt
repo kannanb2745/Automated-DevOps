@@ -1,33 +1,27 @@
-﻿2025-07-15T17:30:10.4489320Z ##[group]Run export PYTHONPATH=.
-2025-07-15T17:30:10.4489683Z [36;1mexport PYTHONPATH=.[0m
-2025-07-15T17:30:10.4489931Z [36;1mpytest test_main.py -v[0m
-2025-07-15T17:30:10.4518862Z shell: /usr/bin/bash -e {0}
-2025-07-15T17:30:10.4519099Z env:
-2025-07-15T17:30:10.4519345Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T17:30:10.4519780Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
-2025-07-15T17:30:10.4520180Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T17:30:10.4520526Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T17:30:10.4520882Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-15T17:30:10.4521242Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
-2025-07-15T17:30:10.4521538Z ##[endgroup]
-2025-07-15T17:30:10.7118703Z ============================= test session starts ==============================
-2025-07-15T17:30:10.7119684Z platform linux -- Python 3.10.18, pytest-8.2.1, pluggy-1.6.0 -- /opt/hostedtoolcache/Python/3.10.18/x64/bin/python
-2025-07-15T17:30:10.7120424Z cachedir: .pytest_cache
-2025-07-15T17:30:10.7120771Z rootdir: /home/runner/work/testing-CI-CD/testing-CI-CD
-2025-07-15T17:30:10.7916186Z collecting ... collected 0 items / 1 error
-2025-07-15T17:30:10.7916638Z 
-2025-07-15T17:30:10.7916850Z ==================================== ERRORS ====================================
-2025-07-15T17:30:10.7917708Z ________________________ ERROR collecting test_main.py _________________________
-2025-07-15T17:30:10.7918661Z ImportError while importing test module '/home/runner/work/testing-CI-CD/testing-CI-CD/test_main.py'.
-2025-07-15T17:30:10.7919575Z Hint: make sure your test modules/packages have valid Python names.
-2025-07-15T17:30:10.7920092Z Traceback:
-2025-07-15T17:30:10.7920752Z /opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/importlib/__init__.py:126: in import_module
-2025-07-15T17:30:10.7921640Z     return _bootstrap._gcd_import(name[level:], package, level)
-2025-07-15T17:30:10.7922246Z test_main.py:2: in <module>
-2025-07-15T17:30:10.7922979Z     import mongomock
-2025-07-15T17:30:10.7923387Z E   ModuleNotFoundError: No module named 'mongomock'
-2025-07-15T17:30:10.7923977Z =========================== short test summary info ============================
-2025-07-15T17:30:10.7924493Z ERROR test_main.py
-2025-07-15T17:30:10.7924937Z !!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
-2025-07-15T17:30:10.7925533Z =============================== 1 error in 0.08s ===============================
-2025-07-15T17:30:10.8224399Z ##[error]Process completed with exit code 2.
+﻿2025-07-15T17:51:55.7755104Z ##[group]Run export PYTHONPATH=.
+2025-07-15T17:51:55.7755434Z [36;1mexport PYTHONPATH=.[0m
+2025-07-15T17:51:55.7755693Z [36;1mpytest test_main.py -v[0m
+2025-07-15T17:51:55.7783846Z shell: /usr/bin/bash -e {0}
+2025-07-15T17:51:55.7784071Z env:
+2025-07-15T17:51:55.7784306Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T17:51:55.7784708Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
+2025-07-15T17:51:55.7785092Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T17:51:55.7785429Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T17:51:55.7785774Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-15T17:51:55.7786116Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
+2025-07-15T17:51:55.7786395Z ##[endgroup]
+2025-07-15T17:51:56.1507261Z ============================= test session starts ==============================
+2025-07-15T17:51:56.1508016Z platform linux -- Python 3.10.18, pytest-8.2.1, pluggy-1.6.0 -- /opt/hostedtoolcache/Python/3.10.18/x64/bin/python
+2025-07-15T17:51:56.1508929Z cachedir: .pytest_cache
+2025-07-15T17:51:56.1509413Z rootdir: /home/runner/work/testing-CI-CD/testing-CI-CD
+2025-07-15T17:51:56.4237505Z collecting ... collected 7 items
+2025-07-15T17:51:56.4237938Z 
+2025-07-15T17:51:56.4372182Z test_main.py::test_home_page PASSED                                      [ 14%]
+2025-07-15T17:51:56.4545235Z test_main.py::test_admin_dashboard PASSED                                [ 28%]
+2025-07-15T17:51:56.4609528Z test_main.py::test_student_dashboard PASSED                              [ 42%]
+2025-07-15T17:51:56.4653336Z test_main.py::test_generate_attendance_no_input PASSED                   [ 57%]
+2025-07-15T17:51:56.4696927Z test_main.py::test_student_generate_attendance_invalid PASSED            [ 71%]
+2025-07-15T17:51:56.4758492Z test_main.py::test_register_user_get PASSED                              [ 85%]
+2025-07-15T17:51:56.4817517Z test_main.py::test_receive_rfid_missing PASSED                           [100%]
+2025-07-15T17:51:56.4818224Z 
+2025-07-15T17:51:56.4818482Z ============================== 7 passed in 0.33s ===============================

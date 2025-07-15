@@ -2,13 +2,13 @@
 ----------------------------
 
 📦 Commit Info:
-- Message       : Fix : Hoping to Work Now
+- Message       : Checking test
 - Author        : kannanb2745
-- Commit SHA    : fdc53440d45af24e91afe100da995e42a7939c5c
+- Commit SHA    : c9d4e67f7d792f51b6fdc2fa06d478797573ecaa
 - Branch        : main
 
 🧪 Workflow Run: CI/CD Pipeline
-- Status        : ❌ Failed
+- Status        : ✅ Success
 - Triggered by  : workflow_dispatch
 - Duration      : 0.00 seconds
 
@@ -26,12 +26,15 @@
 11. 5_Run Pytest ✅
 12. 6_Log in to Docker Hub ✅
 13. 7_Build Docker image ✅
-14. 8_Push to Docker Hub ✅
+14. 8_Push Docker image ✅
+15. 8_Push to Docker Hub ✅
 
 🛠️ Actions Performed:
 - ✅ Ran unit tests using Pytest
 - ✅ Ran unit tests using Pytest
 - 📦 Built Docker image
+- 📦 Built Docker image
+- 🚀 Pushed Docker image to Docker Hub
 - 🚀 Pushed Docker image to Docker Hub
 
 📄 Logs saved in: ./logs/
