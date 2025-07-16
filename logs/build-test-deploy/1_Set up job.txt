@@ -1,43 +1,43 @@
-﻿2025-07-15T20:00:58.8731928Z Current runner version: '2.326.0'
-2025-07-15T20:00:58.8755119Z ##[group]Runner Image Provisioner
-2025-07-15T20:00:58.8756351Z Hosted Compute Agent
-2025-07-15T20:00:58.8756937Z Version: 20250711.363
-2025-07-15T20:00:58.8757544Z Commit: 6785254374ce925a23743850c1cb91912ce5c14c
-2025-07-15T20:00:58.8758294Z Build Date: 2025-07-11T20:04:25Z
-2025-07-15T20:00:58.8758881Z ##[endgroup]
-2025-07-15T20:00:58.8759437Z ##[group]Operating System
-2025-07-15T20:00:58.8760021Z Ubuntu
-2025-07-15T20:00:58.8760469Z 24.04.2
-2025-07-15T20:00:58.8760925Z LTS
-2025-07-15T20:00:58.8761421Z ##[endgroup]
-2025-07-15T20:00:58.8761898Z ##[group]Runner Image
-2025-07-15T20:00:58.8762495Z Image: ubuntu-24.04
-2025-07-15T20:00:58.8763158Z Version: 20250710.1.0
-2025-07-15T20:00:58.8764123Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250710.1/images/ubuntu/Ubuntu2404-Readme.md
-2025-07-15T20:00:58.8765714Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250710.1
-2025-07-15T20:00:58.8767041Z ##[endgroup]
-2025-07-15T20:00:58.8768227Z ##[group]GITHUB_TOKEN Permissions
-2025-07-15T20:00:58.8770092Z Contents: read
-2025-07-15T20:00:58.8770683Z Metadata: read
-2025-07-15T20:00:58.8771281Z Packages: read
-2025-07-15T20:00:58.8771788Z ##[endgroup]
-2025-07-15T20:00:58.8773694Z Secret source: Actions
-2025-07-15T20:00:58.8774528Z Prepare workflow directory
-2025-07-15T20:00:58.9088389Z Prepare all required actions
-2025-07-15T20:00:58.9126074Z Getting action download info
-2025-07-15T20:00:59.2301071Z ##[group]Download immutable action package 'actions/checkout@v3'
-2025-07-15T20:00:59.2302079Z Version: 3.6.0
-2025-07-15T20:00:59.2303217Z Digest: sha256:942562b9c7d4b1f2557f1da21f4d3eb4eb4fd01f2ad78b2a6e187d1b193e0a0f
-2025-07-15T20:00:59.2304370Z Source commit SHA: f43a0e5ff2bd294095638e18286ca9a3d1956744
-2025-07-15T20:00:59.2305047Z ##[endgroup]
-2025-07-15T20:00:59.3284822Z ##[group]Download immutable action package 'actions/setup-python@v4'
-2025-07-15T20:00:59.3285906Z Version: 4.9.1
-2025-07-15T20:00:59.3286829Z Digest: sha256:f03e505388af670b5a108629e0ba26befc08d5c62b41f46146a45fe29ae509a5
-2025-07-15T20:00:59.3287737Z Source commit SHA: 7f4fc3e22c37d6ff65e88745f38bd3157c663f7c
-2025-07-15T20:00:59.3288409Z ##[endgroup]
-2025-07-15T20:00:59.5213044Z ##[group]Download immutable action package 'docker/login-action@v3'
-2025-07-15T20:00:59.5213970Z Version: 3.4.0
-2025-07-15T20:00:59.5214749Z Digest: sha256:864ebd28db095e1602e6ef999f46a4f575083ea874918fbccf0994c2a7680450
-2025-07-15T20:00:59.5215896Z Source commit SHA: 74a5d142397b4f367a81961eba4e8cd7edddf772
-2025-07-15T20:00:59.5216720Z ##[endgroup]
-2025-07-15T20:00:59.8306305Z Complete job name: build-test-deploy
+﻿2025-07-15T20:36:47.0784777Z Current runner version: '2.326.0'
+2025-07-15T20:36:47.0818309Z ##[group]Runner Image Provisioner
+2025-07-15T20:36:47.0819589Z Hosted Compute Agent
+2025-07-15T20:36:47.0820413Z Version: 20250711.363
+2025-07-15T20:36:47.0821529Z Commit: 6785254374ce925a23743850c1cb91912ce5c14c
+2025-07-15T20:36:47.0822937Z Build Date: 2025-07-11T20:04:25Z
+2025-07-15T20:36:47.0823818Z ##[endgroup]
+2025-07-15T20:36:47.0824845Z ##[group]Operating System
+2025-07-15T20:36:47.0825737Z Ubuntu
+2025-07-15T20:36:47.0826539Z 24.04.2
+2025-07-15T20:36:47.0827254Z LTS
+2025-07-15T20:36:47.0827987Z ##[endgroup]
+2025-07-15T20:36:47.0828850Z ##[group]Runner Image
+2025-07-15T20:36:47.0829757Z Image: ubuntu-24.04
+2025-07-15T20:36:47.0830586Z Version: 20250710.1.0
+2025-07-15T20:36:47.0832557Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250710.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-07-15T20:36:47.0835095Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250710.1
+2025-07-15T20:36:47.0837175Z ##[endgroup]
+2025-07-15T20:36:47.0838941Z ##[group]GITHUB_TOKEN Permissions
+2025-07-15T20:36:47.0841472Z Contents: read
+2025-07-15T20:36:47.0842950Z Metadata: read
+2025-07-15T20:36:47.0843819Z Packages: read
+2025-07-15T20:36:47.0844858Z ##[endgroup]
+2025-07-15T20:36:47.0847677Z Secret source: Actions
+2025-07-15T20:36:47.0848861Z Prepare workflow directory
+2025-07-15T20:36:47.1264799Z Prepare all required actions
+2025-07-15T20:36:47.1321513Z Getting action download info
+2025-07-15T20:36:47.4460222Z ##[group]Download immutable action package 'actions/checkout@v3'
+2025-07-15T20:36:47.4461433Z Version: 3.6.0
+2025-07-15T20:36:47.4462650Z Digest: sha256:942562b9c7d4b1f2557f1da21f4d3eb4eb4fd01f2ad78b2a6e187d1b193e0a0f
+2025-07-15T20:36:47.4464034Z Source commit SHA: f43a0e5ff2bd294095638e18286ca9a3d1956744
+2025-07-15T20:36:47.4464870Z ##[endgroup]
+2025-07-15T20:36:47.5360095Z ##[group]Download immutable action package 'actions/setup-python@v4'
+2025-07-15T20:36:47.5361006Z Version: 4.9.1
+2025-07-15T20:36:47.5361892Z Digest: sha256:f03e505388af670b5a108629e0ba26befc08d5c62b41f46146a45fe29ae509a5
+2025-07-15T20:36:47.5363235Z Source commit SHA: 7f4fc3e22c37d6ff65e88745f38bd3157c663f7c
+2025-07-15T20:36:47.5364000Z ##[endgroup]
+2025-07-15T20:36:47.7245340Z ##[group]Download immutable action package 'docker/login-action@v3'
+2025-07-15T20:36:47.7246307Z Version: 3.4.0
+2025-07-15T20:36:47.7247094Z Digest: sha256:864ebd28db095e1602e6ef999f46a4f575083ea874918fbccf0994c2a7680450
+2025-07-15T20:36:47.7248186Z Source commit SHA: 74a5d142397b4f367a81961eba4e8cd7edddf772
+2025-07-15T20:36:47.7248969Z ##[endgroup]
+2025-07-15T20:36:48.0657570Z Complete job name: build-test-deploy
