@@ -1,17 +1,21 @@
-The tech stack of this project appears to be Python, as indicated by the presence of .py files and Python-related directories such as venv (which stands for virtual environment, a tool to keep the dependencies required by different projects separate). 
+The project appears to be using the following tech stack:
 
-The project also seems to be using several Python libraries, including dns, _pytest, tqdm, loguru, and requests, as indicated by the directories under venv/lib/python3.12/site-packages/. 
+1. Python: The presence of .py files indicates that Python is the main programming language used in this project. The project also includes .pyc (Python compiled file) and .pyi (Python stub file) files.
 
-The presence of .log files suggests that the application includes logging, and the .env file indicates that environment variables are being used. 
+2. Virtual Environment (venv): The venv folder suggests that the project is using a Python virtual environment to manage dependencies.
 
-The .md files indicate that Markdown is used, likely for documentation. The .gitignore file suggests that Git is being used for version control. 
+3. Libraries: The project uses several Python libraries including dns, _pytest, tqdm, loguru, requests, and idna among others. These are located in the venv/lib/python3.12/site-packages/ directory, indicating that they are installed in the project's virtual environment.
 
-The .sh, .ps1, .csh, and .fish files indicate the use of various shell scripts, which are often used for automating tasks. 
+4. Shell Scripts: The presence of .sh, .ps1, .fish, and .csh files suggest that the project might be using shell scripts for task automation or system management.
 
-The .cfg file is typically a configuration file, which can be used by various programs to set initial settings. The .test file suggests some form of testing is being implemented. 
+5. Markdown: .md files are Markdown files, typically used for documentation.
 
-The .pyc files are compiled Python files, which are generated and used by Python internally. The .pyi file is a Python interface file, often used for type checking. 
+6. Logging: .log files suggest that the project is using logging for tracking events or errors.
 
-The presence of .DS_Store files suggest that this project is being worked on a macOS system, as these are hidden files created by the Mac OS X operating system for storing custom attributes of a folder. 
+7. Configuration: The .cfg and .env files are typically used for configuration purposes.
 
-Please note that without more specific information about the content of these files and directories, this is a general observation and the actual tech stack might include more technologies.
+8. Git: The presence of .gitignore file indicates that Git is being used for version control.
+
+9. Test: The .test file and _pytest library suggest that the project includes tests, likely written in Python.
+
+Note: The tech stack is inferred from the file types and their usage, actual tech stack might vary based on the project's implementation.
