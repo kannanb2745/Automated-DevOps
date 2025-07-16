@@ -1,21 +1,17 @@
-The project appears to be using the following tech stack:
+The tech stack of this project appears to be:
 
-1. Python: The presence of .py files indicates that Python is the main programming language used in this project. The project also includes .pyc (Python compiled file) and .pyi (Python stub file) files.
+1. Python: The presence of .py files and a Python virtual environment (venv) indicates that Python is the main programming language used in this project. The Python version seems to be 3.12.
 
-2. Virtual Environment (venv): The venv folder suggests that the project is using a Python virtual environment to manage dependencies.
+2. Libraries: The project seems to be using several Python libraries such as dns, _pytest, tqdm, loguru, requests, and idna. 
 
-3. Libraries: The project uses several Python libraries including dns, _pytest, tqdm, loguru, requests, and idna among others. These are located in the venv/lib/python3.12/site-packages/ directory, indicating that they are installed in the project's virtual environment.
+3. Docker: The presence of a Dockerfile suggests that Docker is being used, possibly for creating a containerized application.
 
-4. Shell Scripts: The presence of .sh, .ps1, .fish, and .csh files suggest that the project might be using shell scripts for task automation or system management.
+4. Shell Scripts: The presence of .sh, .ps1, .csh, and .fish files indicates that various shell scripts are being used, possibly for task automation.
 
-5. Markdown: .md files are Markdown files, typically used for documentation.
+5. Git: The presence of a .gitignore file suggests that Git is being used for version control.
 
-6. Logging: .log files suggest that the project is using logging for tracking events or errors.
+6. Markdown: The presence of .md files indicates that Markdown is being used for documentation.
 
-7. Configuration: The .cfg and .env files are typically used for configuration purposes.
+7. Log Files: The presence of .log files indicates that the application is logging events or errors.
 
-8. Git: The presence of .gitignore file indicates that Git is being used for version control.
-
-9. Test: The .test file and _pytest library suggest that the project includes tests, likely written in Python.
-
-Note: The tech stack is inferred from the file types and their usage, actual tech stack might vary based on the project's implementation.
+8. Environment Variables: The presence of a .env file suggests that environment variables are being used to configure the application.
