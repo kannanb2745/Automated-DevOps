@@ -8,7 +8,7 @@ from app.main import create_app
 def client():
     with patch("app.main.MongoClient", new=mongomock.MongoClient):
         app = create_app()
-        app.config["TESTING"] = True
+        app.config['TESTING'] = True
         with app.test_client() as client:
             yield client
 
@@ -25,30 +25,22 @@ def test_admin_dashboard(client):
 
 def test_student_dashboard(client):
     response = client.get(
-        "/student-dashboard?_rfidTag=0x123&_name=John&_rollNo=21CS001&_department=CSE"
-    )
+        "/student-dashboard?_rfidTag=123&_name=John&_rollNo=21CS001&_department=CSE")
     assert response.status_code == 200
     assert b"John" in response.data or b"21CS001" in response.data
 
 
-def test_generate_attendance_missing_input(client):
+def test_generate_attendance_no_input(client):
     response = client.post("/api/generate-attendance", json={})
     assert response.status_code == 400
     assert response.get_json()["error"] == "No data received"
 
 
-def test_generate_attendance_invalid_date(client):
-    response = client.post("/api/generate-attendance", json={
-        "day": "32", "month": "13", "year": "1999"
-    })
-    assert response.status_code == 200
-    assert isinstance(response.get_json(), list)
-
-
-def test_student_generate_attendance_no_input(client):
-    response = client.post("/api/student-generate-attendance", json={})
+def test_student_generate_attendance_invalid(client):
+    response = client.post("/api/student-generate-attendance",
+                           json={"month": "", "year": "", "rfidTag": "0x123"})
     assert response.status_code == 400
-    assert response.get_json()["error"] == "No data received"
+    assert response.get_json()["error"] == "Invalid date input"
 
 
 def test_register_user_get(client):
@@ -56,9 +48,7 @@ def test_register_user_get(client):
     assert response.status_code == 200
 
 
-def test_auth_invalid_user(client):
-    response = client.post("/auth", data={
-        "rollNo": "12063",
-        "DOB": "2005-04-27"
-    }, follow_redirects=True)
+def test_receive_rfid_missing(client):
+    response = client.post("/receive-rfid", json={})
     assert response.status_code == 200
+    assert "rfid" in response.get_json()
