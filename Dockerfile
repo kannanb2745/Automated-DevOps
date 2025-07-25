@@ -1,39 +1,42 @@
-# Use a minimal Python image
+# Use a minimal Python base image
 FROM python:3.10-slim
 
-# Set environment variables
+# Set environment variables to reduce overhead and improve performance
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
-# Install dependencies
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
+# Install system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
+    python3-dev \
     curl \
     nano \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-# Set working directory
+# Set working directory in the container
 WORKDIR /app
 
-# Copy everything into container
+# Copy dependency and source files
+COPY requirements.txt .
+RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
+
+# Copy rest of the application code
 COPY . .
 
-# Install Python packages
-RUN pip install --upgrade pip
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Set environment for Flask
+# Set environment variables for Flask
 ENV FLASK_APP=app/main.py
 ENV FLASK_RUN_HOST=0.0.0.0
 ENV FLASK_ENV=development
 
-# Copy .env manually (optional if using docker-compose)
-# COPY .env .env
+# Install python-dotenv if not already in requirements.txt
+RUN pip install python-dotenv
 
-# Expose Flask port
-EXPOSE 5000
+# Optional: Copy .env file if you're not using Docker Compose
+COPY .env .env
+
+# Expose the Flask port
+EXPOSE 5678
 
 # Run the app
-CMD ["flask", "run"]
+CMD ["flask", "run", "--port=5678"]
