@@ -42,4 +42,3 @@ EXPOSE 5678
 
 # Run the app using Flask
 CMD ["flask", "run", "--port=5678"]
-cd
