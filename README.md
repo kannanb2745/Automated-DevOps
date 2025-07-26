@@ -1,74 +1,58 @@
 # Project Title
 
-This is a Python-based project with a total of 500 files scanned. The project is structured into multiple directories and subdirectories, with the majority of files being Python (.py) files.
+This is a Python-based project with a total of 500 files. The project uses various libraries and modules as evident from the large number of files in the `venv/lib/python3.12/site-packages/` directory.
 
 ## Project Structure
 
-The project contains a variety of file types, with the most common being Python (.py) files. Other file types include log files, text files, and various configuration and script files.
+The project includes a variety of file types, predominantly Python (.py) files, along with some configuration, text, and log files. The project also includes a virtual environment (`venv/`), and a `logs/` directory for storing log files.
 
-The project is organized into several directories. The directories with the most files are mostly located in the virtual environment (venv) directory, specifically in the site-packages subdirectory. This is where the project's dependencies are stored. There is also a logs directory where log files are kept.
+Here is a summary of the file types:
 
-## File Types
-
-Here is a breakdown of the file types in the project:
-
-- Python files (.py): 191
-- Files with no extension: 90
+- Python files (.py): 185
 - Log files (.log): 31
-- Text files (.txt): 9
-- Typed files (.typed): 6
+- Text files (.txt): 11
 - Markdown files (.md): 3
+- Example files (.example): 2
 - Configuration files (.cfg): 1
-- Compiled Python files (.pyc): 1
-- Test files (.test): 1
-- Shell script files (.sh, .ps1, .csh, .fish): 4
-- Others: 4
+- Shell scripts (.sh): 1
+- Dockerfile: 1
+- Other file types: 93
 
-## Directories
+## Getting Started
 
-The project is organized into the following directories:
+To get started with this project, clone the repository and install the required packages listed in the `requirements.txt` file.
 
-- venv/lib/python3.12/site-packages/dns/: 56 files
-- venv/lib/python3.12/site-packages/_pytest/: 46 files
-- logs/: 33 files
-- venv/lib/python3.12/site-packages/tqdm/: 25 files
-- venv/bin/: 23 files
-- venv/lib/python3.12/site-packages/loguru/: 21 files
-- venv/lib/python3.12/site-packages/requests/: 18 files
-- ./: 10 files
-- venv/lib/python3.12/site-packages/pytest-8.2.1.dist-info/: 9 files
-- venv/lib/python3.12/site-packages/idna/: 9 files
+```bash
+git clone <repository_url>
+cd <project_directory>
+pip install -r requirements.txt
+```
 
-## Sample Files
+## Running Tests
 
-Here are some sample files from the project:
+To run tests, use the following command:
 
-- .env
-- test_main.py
-- .DS_Store
-- tech_stack.md
-- log.py
-- structure_analysis.md
-- .gitignore
-- Dockerfile
-- README.md
-- Recent-Activities-of-other-DEVS.py
-- venv/pyvenv.cfg
-- venv/.DS_Store
-- logs/autodevops_20250716_054921.log
-- logs/autodevops_20250716_055815.log
-- logs/autodevops_20250715_224407.log
-- logs/autodevops_20250716_063133.log
-- logs/autodevops_20250715_201910.log
-- logs/autodevops_20250716_055302.log
-- logs/autodevops_20250716_013048.log
-- logs/.DS_Store
-- logs/autodevops_20250715_201509.log
-- logs/autodevops_20250715_225951.log
-- logs/autodevops_20250715_235957.log
-- logs/autodevops_20250715_233750.log
-- logs/autodevops_20250716_054125.log
+```bash
+python -m unittest test_main.py
+```
 
-## Usage
+## Logging
 
-Please refer to individual .md files for instructions on how to use the scripts and modules in this project.
+The project uses the `loguru` library for logging. Log files are stored in the `logs/` directory.
+
+## Docker
+
+The project includes a Dockerfile for building a Docker image of the application. To build and run the Docker image, use the following commands:
+
+```bash
+docker build -t <image_name> .
+docker run -p 5000:5000 <image_name>
+```
+
+## Contributing
+
+Please read `CONTRIBUTING.md` for details on our code of conduct, and the process for submitting pull requests to us.
+
+## License
+
+This project is licensed under the MIT License - see the `LICENSE.md` file for details.

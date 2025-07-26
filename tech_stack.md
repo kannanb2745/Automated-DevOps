@@ -1,17 +1,17 @@
-The tech stack of this project appears to be:
+The tech stack for this project appears to be:
 
-1. Python: The presence of .py files and a Python virtual environment (venv) indicates that Python is the main programming language used in this project. The Python version seems to be 3.12.
+- Python: The project contains a large number of .py files and the presence of a venv folder suggests the use of virtual environments in Python. The venv/lib/python3.12/site-packages/ suggests the use of Python 3.12.
 
-2. Libraries: The project seems to be using several Python libraries such as dns, _pytest, tqdm, loguru, requests, and idna. 
+- pytest: The presence of _pytest in the venv/lib/python3.12/site-packages/ folder suggests the use of pytest for testing.
 
-3. Docker: The presence of a Dockerfile suggests that Docker is being used, possibly for creating a containerized application.
+- Docker: The presence of a Dockerfile suggests that Docker is being used, likely for containerization of the application.
 
-4. Shell Scripts: The presence of .sh, .ps1, .csh, and .fish files indicates that various shell scripts are being used, possibly for task automation.
+- Git: The .gitignore file suggests the use of Git for version control.
 
-5. Git: The presence of a .gitignore file suggests that Git is being used for version control.
+- Various Python Libraries: The presence of folders for dns, loguru, tqdm, requests, and idna in the venv/lib/python3.12/site-packages/ folder suggests the use of these libraries.
 
-6. Markdown: The presence of .md files indicates that Markdown is being used for documentation.
+- Shell Scripting: The presence of .sh, .ps1, .csh, and .fish files suggest the use of shell scripting, possibly for automation or setup tasks.
 
-7. Log Files: The presence of .log files indicates that the application is logging events or errors.
+- Environment Variables: The presence of .env and .env.example files suggest the use of environment variables, possibly for configuration settings.
 
-8. Environment Variables: The presence of a .env file suggests that environment variables are being used to configure the application.
+- Logging: The presence of .log files in a logs/ directory suggests the use of logging in the application.
