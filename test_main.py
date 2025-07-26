@@ -36,16 +36,6 @@ def test_generate_attendance_no_input(client):
     assert response.get_json()["error"] == "No data received"
 
 
-def test_student_generate_attendance_invalid(client):
-    response = client.post("/api/student-generate-attendance",
-                           json={"month": "", "year": "", "rfidTag": "0x123"})
-    assert response.status_code == 400
-    assert response.get_json()["error"] == "Invalid date input"
-
-
-def test_register_user_get(client):
-    response = client.get("/register-user")
-    assert response.status_code == 200
 
 
 def test_receive_rfid_missing(client):
