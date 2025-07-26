@@ -1,45 +1,26 @@
-﻿2025-07-26T03:42:13.6978623Z ##[group]Run export PYTHONPATH=.
-2025-07-26T03:42:13.6979171Z [36;1mexport PYTHONPATH=.[0m
-2025-07-26T03:42:13.6979434Z [36;1mpytest test_main.py -v[0m
-2025-07-26T03:42:13.7008626Z shell: /usr/bin/bash -e {0}
-2025-07-26T03:42:13.7009284Z env:
-2025-07-26T03:42:13.7009557Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-26T03:42:13.7010014Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
-2025-07-26T03:42:13.7010436Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-26T03:42:13.7010805Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-26T03:42:13.7011162Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
-2025-07-26T03:42:13.7011535Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
-2025-07-26T03:42:13.7011819Z ##[endgroup]
-2025-07-26T03:42:14.0555613Z ============================= test session starts ==============================
-2025-07-26T03:42:14.0556734Z platform linux -- Python 3.10.18, pytest-8.2.1, pluggy-1.6.0 -- /opt/hostedtoolcache/Python/3.10.18/x64/bin/python
-2025-07-26T03:42:14.0557512Z cachedir: .pytest_cache
-2025-07-26T03:42:14.0557884Z rootdir: /home/runner/work/testing-CI-CD/testing-CI-CD
-2025-07-26T03:42:14.0558308Z plugins: anyio-4.9.0
-2025-07-26T03:42:14.2186383Z collecting ... collected 7 items
-2025-07-26T03:42:14.2186840Z 
-2025-07-26T03:42:14.5080047Z test_main.py::test_home_page PASSED                                      [ 14%]
-2025-07-26T03:42:14.5179609Z test_main.py::test_admin_dashboard PASSED                                [ 28%]
-2025-07-26T03:42:14.5267328Z test_main.py::test_student_dashboard PASSED                              [ 42%]
-2025-07-26T03:42:14.5335955Z test_main.py::test_generate_attendance_no_input PASSED                   [ 57%]
-2025-07-26T03:42:14.5796958Z test_main.py::test_student_generate_attendance_invalid FAILED            [ 71%]
-2025-07-26T03:42:14.5920791Z test_main.py::test_register_user_get PASSED                              [ 85%]
-2025-07-26T03:42:14.6080653Z test_main.py::test_receive_rfid_missing PASSED                           [100%]
-2025-07-26T03:42:14.6081488Z 
-2025-07-26T03:42:14.6081803Z =================================== FAILURES ===================================
-2025-07-26T03:42:14.6082727Z ___________________ test_student_generate_attendance_invalid ___________________
-2025-07-26T03:42:14.6083359Z 
-2025-07-26T03:42:14.6083594Z client = <FlaskClient <Flask 'app.main'>>
-2025-07-26T03:42:14.6084569Z 
-2025-07-26T03:42:14.6084889Z     def test_student_generate_attendance_invalid(client):
-2025-07-26T03:42:14.6085966Z         response = client.post("/api/student-generate-attendance",
-2025-07-26T03:42:14.6086529Z                                json={"month": "", "year": "", "rfidTag": "0x123"})
-2025-07-26T03:42:14.6087061Z >       assert response.status_code == 400
-2025-07-26T03:42:14.6087468Z E       assert 200 == 400
-2025-07-26T03:42:14.6087866Z E        +  where 200 = <WrapperTestResponse streamed [200 OK]>.status_code
-2025-07-26T03:42:14.6088259Z 
-2025-07-26T03:42:14.6088423Z test_main.py:42: AssertionError
-2025-07-26T03:42:14.6089153Z =========================== short test summary info ============================
-2025-07-26T03:42:14.6089872Z FAILED test_main.py::test_student_generate_attendance_invalid - assert 200 == 400
-2025-07-26T03:42:14.6090584Z  +  where 200 = <WrapperTestResponse streamed [200 OK]>.status_code
-2025-07-26T03:42:14.6091118Z ========================= 1 failed, 6 passed in 0.55s ==========================
-2025-07-26T03:42:14.6682777Z ##[error]Process completed with exit code 1.
+﻿2025-07-26T03:46:06.1918756Z ##[group]Run export PYTHONPATH=.
+2025-07-26T03:46:06.1919091Z [36;1mexport PYTHONPATH=.[0m
+2025-07-26T03:46:06.1919340Z [36;1mpytest test_main.py -v[0m
+2025-07-26T03:46:06.1947161Z shell: /usr/bin/bash -e {0}
+2025-07-26T03:46:06.1947395Z env:
+2025-07-26T03:46:06.1947656Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-26T03:46:06.1948083Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
+2025-07-26T03:46:06.1948604Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-26T03:46:06.1948966Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-26T03:46:06.1949329Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+2025-07-26T03:46:06.1949681Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
+2025-07-26T03:46:06.1949980Z ##[endgroup]
+2025-07-26T03:46:06.5409601Z ============================= test session starts ==============================
+2025-07-26T03:46:06.5410313Z platform linux -- Python 3.10.18, pytest-8.2.1, pluggy-1.6.0 -- /opt/hostedtoolcache/Python/3.10.18/x64/bin/python
+2025-07-26T03:46:06.5410926Z cachedir: .pytest_cache
+2025-07-26T03:46:06.5411231Z rootdir: /home/runner/work/testing-CI-CD/testing-CI-CD
+2025-07-26T03:46:06.5411572Z plugins: anyio-4.9.0
+2025-07-26T03:46:06.7033785Z collecting ... collected 5 items
+2025-07-26T03:46:06.7034114Z 
+2025-07-26T03:46:07.0498774Z test_main.py::test_home_page PASSED                                      [ 20%]
+2025-07-26T03:46:07.0591704Z test_main.py::test_admin_dashboard PASSED                                [ 40%]
+2025-07-26T03:46:07.0674775Z test_main.py::test_student_dashboard PASSED                              [ 60%]
+2025-07-26T03:46:07.0738947Z test_main.py::test_generate_attendance_no_input PASSED                   [ 80%]
+2025-07-26T03:46:07.0816970Z test_main.py::test_receive_rfid_missing PASSED                           [100%]
+2025-07-26T03:46:07.0817522Z 
+2025-07-26T03:46:07.0817766Z ============================== 5 passed in 0.54s ===============================

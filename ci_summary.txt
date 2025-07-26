@@ -2,13 +2,13 @@
                 ----------------------------
 
                 📦 Commit Info:
-                - Message       : testing push
+                - Message       : feat new docker
                 - Author        : kannanb2745
-                - Commit SHA    : 2e23ea2de64c31bb2416a7ad1351165611c054c7
+                - Commit SHA    : 8ef73710fd71a2b386ad285176c833cacf9a148d
                 - Branch        : main
 
                 🧪 Workflow Run: CI/CD Pipeline
-                - Status        : ❌ Failed
+                - Status        : ✅ Success
                 - Triggered by  : workflow_dispatch
                 - Duration      : 0.00 seconds
 
